@@ -14,8 +14,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div>
-          <p>Hi, I am Moses</p>
+        <div className="container mx-auto">
+
+          <p className="text-white text-xl font-medium text-center"> Hi, I am Moses</p>
+
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
+         
+              <p className="text-white text-base font-normal text-center"> I am a Software Engineer</p>
+              </div>
+              </div>
         </div>
       </main>
     </>
