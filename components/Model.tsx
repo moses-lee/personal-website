@@ -2,7 +2,7 @@ import * as THREE from "three";
 import React, { useRef, useState } from "react";
 import { useFrame, ThreeElements } from "@react-three/fiber";
 
-export default function Box(props: ThreeElements["mesh"]) {
+export default function Model(props: ThreeElements["mesh"]) {
   const ref = useRef<THREE.Mesh>(null!);
   const [hovered, hover] = useState(false);
   const [clicked, click] = useState(false);
@@ -16,7 +16,7 @@ export default function Box(props: ThreeElements["mesh"]) {
       onPointerOver={(event) => hover(true)}
       onPointerOut={(event) => hover(false)}
     >
-      <sphereGeometry />
+      <sphereGeometry args={[1, 1, 1]}/>
       <meshStandardMaterial color="gray" />
     </mesh>
   );

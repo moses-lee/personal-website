@@ -1,12 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import Box from "../components/Box";
+import Box from "../components/Model";
 import { Canvas } from "@react-three/fiber";
-
+import { useRouter } from "next/router";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -25,7 +27,7 @@ export default function Home() {
 
           <div className="flex flex-col absolute z-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <p className="text-white text-xl font-light text-center">
-              hi, I am Moses
+              hi, I am moses
             </p>
             <hr />
             <p className="text-white text-base font-light text-center">
@@ -35,9 +37,30 @@ export default function Home() {
 
           <div className="absolute z-100 bottom-0 -translate-x-1/2 left-1/2 w-1/2 mb-48">
             <div className="flex justify-around">
-              <p className="text-white text-base font-light underline cursor-pointer">about</p>
-              <p className="text-white text-base font-light underline cursor-pointer">projects</p>
-              <p className="text-white text-base font-light underline cursor-pointer">contact</p>
+              <p
+                className="text-white text-base font-light underline cursor-pointer"
+                onClick={() => {
+                  router.push("/about");
+                }}
+              >
+                about
+              </p>
+              <p
+                className="text-white text-base font-light underline cursor-pointer"
+                onClick={() => {
+                  router.push("/projects");
+                }}
+              >
+                projects
+              </p>
+              <p
+                className="text-white text-base font-light underline cursor-pointer"
+                onClick={() => {
+                  router.push("/contact");
+                }}
+              >
+                contact
+              </p>
             </div>
           </div>
         </div>
