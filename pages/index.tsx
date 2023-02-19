@@ -25,12 +25,20 @@ export default function Home() {
 
           <div className="flex flex-col absolute z-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <p className="text-white text-xl font-light text-center">
-              Hi, I am Moses
+              hi, I am Moses
             </p>
             <hr />
             <p className="text-white text-base font-light text-center">
               full-stack engineer | artist
             </p>
+          </div>
+
+          <div className="absolute z-100 bottom-0 -translate-x-1/2 left-1/2 w-1/2 mb-48">
+            <div className="flex justify-around">
+              <p className="text-white text-base font-light underline cursor-pointer">about</p>
+              <p className="text-white text-base font-light underline cursor-pointer">projects</p>
+              <p className="text-white text-base font-light underline cursor-pointer">contact</p>
+            </div>
           </div>
         </div>
       </main>
